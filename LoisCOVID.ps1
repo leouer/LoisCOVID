@@ -16,3 +16,4 @@ $dat='undefined' #猜测为日期，不用管该参数
 $para= -Join('uid=',$uid, '&gid=', $gid, '&uni=', $uni, '&con=', $con, '&loc=', $loc, '&temp=', $temp, '&sit=', $sit, '&sym=', $sym, '&inf=', $inf, '&note=', $note, '&area=', $area, '&toge=', $toge, '&oth=', $oth, '&dat=', $dat)
 
 $res = Invoke-WebRequest -Uri 'https://a.rouor.com/LoisCOVID/rpt/add' -Body $para.ToLower() -ContentType 'application/x-www-form-urlencoded;charset=UTF-8'  -Method 'POST'
+$res
